@@ -43,7 +43,7 @@ const SpeechChatAssistant = () => {
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer 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`,
+         'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
